@@ -1,0 +1,42 @@
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js" charset="utf-8"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
+<title>Test my bootcamp</title>
+</head>
+
+<body>
+    <!-- -->
+    <div id="mocha"></div>
+    <script>
+        // the mocha test style to use - we use BDD - Behviour Driven Development
+        mocha.setup('bdd');
+        //ensure the assert function is available
+        var assert = chai.assert;
+    </script>
+
+    <!-- the function to be tested -->
+    <script src="greet.js" charset="utf-8"></script>
+    <script src="1-chkmany.js" charset="utf-8"></script>
+    <script src="cpt-reg.js" charset="utf-8"></script>
+    <script src="gauteng-plates.js" charset="utf-8"></script>
+    <script src="less-rep.js" charset="utf-8"></script>
+    <script src="limpopo-reg.js" charset="utf-8"></script>
+    <script src="vehicle-reg.js" charset="utf-8"></script>
+    <!-- followed by the tests -->
+    <script src="tests/greet.test.js" charset="utf-8"></script>
+    <script src="tests/1-chkmany.test.js" charset="utf-8"></script>
+    <script src="tests/cpt-reg.test.js" charset="utf-8"></script>
+    <script src="tests/gauteng-plates.test.js" charset="utf-8"></script>
+    <script src="tests/less-rep.test.js" charset="utf-8"></script>
+    <script src="tests/limpopo-reg.test.js" charset="utf-8"></script>
+    <script src="tests/vehicle-reg.test.js" charset="utf-8"></script>
+
+    <script>
+        <!-- configure and run mocha -->
+        mocha.checkLeaks();
+        mocha.run();
+    </script>
+</body>
